@@ -8,7 +8,7 @@ end
 
 
 def select_value_and_count_of_most_prolific_species
-  "SELECT characters.species, COUNT(character_books.*) FROM characters JOIN character_books ON characters.id = character_books.character_id GROUP BY characters.species ORDER BY DESC COUNT(character_books.*) LIMIT 1;"
+  "SELECT characters.species, COUNT(character_books.*) FROM characters JOIN character_books ON characters.id = character_books.character_id GROUP BY characters.species ORDER BY COUNT(character_books.*) DESC LIMIT 1;"
 end
 
 def select_name_and_series_subgenres_of_authors
